@@ -48,4 +48,11 @@ if __name__ == "__main__":
         acc.reset()
         assert acc.total == 0.0
 
-        acc2 = Accum
+        # 새로운 객체 테스트
+        acc2 = Accumulator(start=10)
+        assert acc2.total == 10.0
+        assert acc2.add(5) == 15.0
+
+        print("✅ All tests passed!")
+
+    run_tests()
