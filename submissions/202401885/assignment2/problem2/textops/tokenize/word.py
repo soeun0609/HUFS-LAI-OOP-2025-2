@@ -11,7 +11,10 @@ def word_tokens(s: str) -> List[str]:
     if not isinstance(s, str):
         raise TypeError("word_tokens: input must be str")
 
+    # 공백 축약 + 앞뒤 공백 제거
     s = re.sub(r"\s+", " ", s).strip()
+
     if not s:
         return []
+
     return s.split(" ")
